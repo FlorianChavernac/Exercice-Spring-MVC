@@ -24,6 +24,11 @@ Le contrôleur transmet deux informations à cette vue :
         <td>{{name}}</td>
         <td>{{population}}</td>
         <td>{{country}}</td>
+        {{! On affiche un lien vers la page de modification de la ville }}
+        <td>
+            <a href='edit?id={{id}}'>Modifier</a>
+            <a href='delete?id={{id}}'>Supprimer</a>
+        </td>
     </tr>
     {{/citys}}
 </table>

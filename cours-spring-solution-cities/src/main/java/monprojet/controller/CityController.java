@@ -60,4 +60,33 @@ public class CityController {
         return "redirect:show"; // POST-Redirect-GET : on se redirige vers l'affichage de la liste
     }
 
+    /**
+     * Appelé par le lien 'Modifier' dans 'showCity.html'
+     * Montre le formulaire permettant de modifier une catégorie
+     * 
+     * @param ville à partir de l'id de la ville transmise en paramètre,
+     *              Spring fera une requête SQL SELECT pour chercher la ville
+     *              dans la base
+     * @param model pour transmettre les informations à la vue
+     * @return le nom de la vue à afficher ('formulaireVille.html')
+     */
+    @GetMapping(path = "edit")
+    public String montreLeFormulairePourEdition(@RequestParam("id") City city1, Model model) {
+        model.addAttribute("city1", city1);
+        model.addAttribute("countrys", daoCountry.findAll());
+        return "formulaireVille";
+    }
+
+    	/**
+	 * Appelé par le lien 'Supprimer' dans 'showCategories.html'
+	 * @param city à partir de l'id de la ville transmis en paramètre, 
+	 *                  Spring fera une requête SQL SELECT pour chercher la ville dans la base
+	 * @return une redirection vers l'affichage de la liste des ville
+	 */
+	@GetMapping(path = "delete")
+	public String supprimeUneCategoriePuisMontreLaListe(@RequestParam("id") City city) {
+		dao.delete(city);
+		return "redirect:show"; // on se redirige vers l'affichage de la liste
+	}
+
 }

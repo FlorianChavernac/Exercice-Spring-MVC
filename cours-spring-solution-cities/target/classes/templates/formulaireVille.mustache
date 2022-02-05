@@ -1,6 +1,6 @@
 <!--/* 
 	Information transmise par le contrôleur :
-	- ville : la ville à editer
+	- city1 : la ville à editer
     -countrys : la liste des pays
 */-->
 <h1>Ajouter une ville</h1>
@@ -9,25 +9,27 @@
     <div class="column">
         <!--/* th:field définit quel champ de l'objet est édité par cette zone de saisie */-->
         <label for="id">Identifiant:</label>
-        <input type="text" name="id" {{#city.id}} value="{{city.id}}" {{/city.id}} readonly="readonly"
+        <input type="text" name="id" {{#city1.id}} value="{{city1.id}}" {{/city1.id}} readonly="readonly"
             placeholder="auto-généré, nom modifiable" />
         <input type="submit" value="Enregistrer" /> <input type="reset" value="Réinitialiser" />
     </div>
     <div class="column">
         <label for="name">Nom:</label>
-        <input type="text" name="name" {{#City.name}} value="{{City.name}}" {{/City.name}}
+        <input type="text" name="name" {{#city1.name}} value="{{city1.name}}" {{/city1.name}}
             placeholder="Nom de la ville" />
     </div>
     <div class="column">
         <label for="population">Population:</label>
-        <input type="text" name="population" {{#City.population}} value="{{City.population}}" {{/City.population}}
+        <input type="text" name="population" {{#city1.population}} value="{{city1.population}}" {{/city1.population}}
             placeholder="Nombre d'habitant de la ville" />
     </div>
     <div class="column">
         <label for="country">Choisissez le pays</label>
         <!--/* Une liste de choix pour le paramètre 'country' -->
-        <select name='country' {{#City.country}} value="{{City.country}}" {{/City.country}}>
-            <option selected="true" disabled="disabled">Choisissez un Pays</option>
+        <select name='country'>
+            {{#city1}}
+            <option value="{{city1.country.id}} selected="true" disabled="disabled"> Pays actuel : {{city1.country.name}}</option>
+            {{/city1}}
             {{#countrys}}
             <option value="{{id}}">{{name}}</option>
             {{/countrys}}

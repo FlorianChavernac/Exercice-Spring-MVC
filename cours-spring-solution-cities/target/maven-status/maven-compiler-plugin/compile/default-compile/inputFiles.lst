@@ -1,9 +1,9 @@
-P:\ISIS_3a\Semestre 6\Conception et déploiement d'applications\Technologies Web\cours-spring-solution-cities\src\main\java\monprojet\dao\CityRepository.java
-P:\ISIS_3a\Semestre 6\Conception et déploiement d'applications\Technologies Web\cours-spring-solution-cities\src\main\java\monprojet\dao\CountryRepository.java
-P:\ISIS_3a\Semestre 6\Conception et déploiement d'applications\Technologies Web\cours-spring-solution-cities\src\main\java\monprojet\entity\City.java
-P:\ISIS_3a\Semestre 6\Conception et déploiement d'applications\Technologies Web\cours-spring-solution-cities\src\main\java\monprojet\dto\PopulationResult.java
-P:\ISIS_3a\Semestre 6\Conception et déploiement d'applications\Technologies Web\cours-spring-solution-cities\src\main\java\monprojet\controller\CityController.java
-P:\ISIS_3a\Semestre 6\Conception et déploiement d'applications\Technologies Web\cours-spring-solution-cities\src\main\java\monprojet\entity\Country.java
-P:\ISIS_3a\Semestre 6\Conception et déploiement d'applications\Technologies Web\cours-spring-solution-cities\src\main\java\monprojet\ConsoleApp.java
-P:\ISIS_3a\Semestre 6\Conception et déploiement d'applications\Technologies Web\cours-spring-solution-cities\src\main\java\monprojet\WebApp.java
-P:\ISIS_3a\Semestre 6\Conception et déploiement d'applications\Technologies Web\cours-spring-solution-cities\src\main\java\monprojet\controller\CountryController.java
+D:\Download\Exercice-Spring-MVC\cours-spring-solution-cities\src\main\java\monprojet\dao\CityRepository.java
+D:\Download\Exercice-Spring-MVC\cours-spring-solution-cities\src\main\java\monprojet\controller\CityController.java
+D:\Download\Exercice-Spring-MVC\cours-spring-solution-cities\src\main\java\monprojet\dao\CountryRepository.java
+D:\Download\Exercice-Spring-MVC\cours-spring-solution-cities\src\main\java\monprojet\entity\City.java
+D:\Download\Exercice-Spring-MVC\cours-spring-solution-cities\src\main\java\monprojet\ConsoleApp.java
+D:\Download\Exercice-Spring-MVC\cours-spring-solution-cities\src\main\java\monprojet\controller\CountryController.java
+D:\Download\Exercice-Spring-MVC\cours-spring-solution-cities\src\main\java\monprojet\dto\PopulationResult.java
+D:\Download\Exercice-Spring-MVC\cours-spring-solution-cities\src\main\java\monprojet\entity\Country.java
+D:\Download\Exercice-Spring-MVC\cours-spring-solution-cities\src\main\java\monprojet\WebApp.java
