@@ -1,0 +1,26 @@
+{{!
+Le contrôleur transmet deux informations à cette vue :
+- countrys : la liste des catégories à afficher
+- message : un éventuel message d'erreur ou d'information
+}}
+
+<h1>Les pays</h1>
+{{! On affiche un éventuel message d'erreur }}
+{{#message}}<h3>{{message}}</h3>{{/message}}
+<table>
+	<tr>
+		<th>Code</th>
+		<th>Name</th>
+	</tr>
+	{{! Pour chaque pays p dans la liste 'countrys' transmise par le contrôleur }}
+	{{#countrys}}
+	<tr>
+		{{! On affiche les informations du pays }}
+		<td>{{code}}</td>
+		<td>{{name}}</td>
+	</tr>
+	{{/countrys}}
+</table>
+</body>
+
+</html>

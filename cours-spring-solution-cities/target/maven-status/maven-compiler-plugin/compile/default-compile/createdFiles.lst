@@ -1,0 +1,9 @@
+monprojet\WebApp.class
+monprojet\entity\Country.class
+monprojet\ConsoleApp.class
+monprojet\controller\CityController.class
+monprojet\controller\CountryController.class
+monprojet\dto\PopulationResult.class
+monprojet\dao\CountryRepository.class
+monprojet\entity\City.class
+monprojet\dao\CityRepository.class

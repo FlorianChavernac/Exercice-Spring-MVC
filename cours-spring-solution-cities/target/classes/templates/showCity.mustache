@@ -1,0 +1,32 @@
+{{!
+Le contrôleur transmet deux informations à cette vue :
+- countrys : la liste des catégories à afficher
+- message : un éventuel message d'erreur ou d'information
+}}
+
+<h1>Les villes</h1>
+{{! On appelle l'URL 'add' du contôleur }}
+<a href='add'>Ajouter une ville</a>
+{{! On affiche un éventuel message d'erreur }}
+{{#message}}<h3>{{message}}</h3>{{/message}}
+<table>
+    <tr>
+        <th>Identifiant</th>
+        <th>Nom</th>
+        <th>Population</th>
+        <th>Pays</th>
+    </tr>
+    {{! Pour chaque ville v dans la liste 'citys' transmise par le contrôleur }}
+    {{#citys}}
+    <tr>
+        {{! On affiche les informations de la ville }}
+        <td>{{id}}</td>
+        <td>{{name}}</td>
+        <td>{{population}}</td>
+        <td>{{country}}</td>
+    </tr>
+    {{/citys}}
+</table>
+</body>
+
+</html>
