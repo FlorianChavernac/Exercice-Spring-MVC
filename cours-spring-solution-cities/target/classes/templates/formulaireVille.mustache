@@ -3,36 +3,47 @@
 	- city1 : la ville à editer
     -countrys : la liste des pays
 */-->
-<h1>Ajouter une ville</h1>
-<!--/* Au revient au contrôleur, avec la méthode POST */-->
-<form method="post" action="save">
-    <div class="column">
-        <!--/* th:field définit quel champ de l'objet est édité par cette zone de saisie */-->
-        <label for="id">Identifiant:</label>
-        <input type="text" name="id" {{#city1.id}} value="{{city1.id}}" {{/city1.id}} readonly="readonly"
-            placeholder="auto-généré, nom modifiable" />
-        <input type="submit" value="Enregistrer" /> <input type="reset" value="Réinitialiser" />
-    </div>
-    <div class="column">
-        <label for="name">Nom:</label>
-        <input type="text" name="name" {{#city1.name}} value="{{city1.name}}" {{/city1.name}}
-            placeholder="Nom de la ville" />
-    </div>
-    <div class="column">
-        <label for="population">Population:</label>
-        <input type="text" name="population" {{#city1.population}} value="{{city1.population}}" {{/city1.population}}
-            placeholder="Nombre d'habitant de la ville" />
-    </div>
-    <div class="column">
-        <label for="country">Choisissez le pays</label>
-        <!--/* Une liste de choix pour le paramètre 'country' -->
-        <select name='country'>
-            {{#city1}}
-            <option value="{{city1.country.id}} selected="true" disabled="disabled"> Pays actuel : {{city1.country.name}}</option>
-            {{/city1}}
-            {{#countrys}}
-            <option value="{{id}}">{{name}}</option>
-            {{/countrys}}
-        </select>
-    </div>
-</form>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Editions des villes</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+</head>
+
+<body>
+    <h1>Editions des villes</h1>
+    <!--/* Au revient au contrôleur, avec la méthode POST */-->
+    <form method="post" action="save">
+        <div class="column">
+            <!--/* th:field définit quel champ de l'objet est édité par cette zone de saisie */-->
+            <label for="id">Identifiant :</label>
+            <input type="text" name="id" {{#city1.id}} value="{{city1.id}}" {{/city1.id}} readonly="readonly"
+                placeholder="auto-généré, nom modifiable" />
+            <input type="submit" value="Enregistrer" /> <input type="reset" value="Réinitialiser" />
+        </div>
+        <div class="column">
+            <label for="name">Nom de la ville :</label>
+            <input type="text" name="name" {{#city1.name}} value="{{city1.name}}" {{/city1.name}}
+                placeholder="Nom de la ville" />
+        </div>
+        <div class="column">
+            <label for="population">Population (en millions):</label>
+            <input type="number" name="population" {{#city1.population}} value="{{city1.population}}"
+                {{/city1.population}} placeholder="Nombre d'habitant de la ville" />
+        </div>
+        <div class="column">
+            <label for="country">Choisissez le pays :</label>
+            <!--/* Une liste de choix pour le paramètre 'country' -->
+            <select name='country'>
+                {{#countrys}}
+                <option value="{{id}}">{{name}}</option>
+                {{/countrys}}
+            </select>
+        </div>
+    </form>
+</body>
+
+</html>

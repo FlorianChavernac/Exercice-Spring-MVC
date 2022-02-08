@@ -1,37 +1,47 @@
-{{!
-Le contrôleur transmet deux informations à cette vue :
-- countrys : la liste des catégories à afficher
-- message : un éventuel message d'erreur ou d'information
-}}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 
-<h1>Les villes</h1>
-{{! On appelle l'URL 'add' du contôleur }}
-<a href='add'>Ajouter une ville</a>
-{{! On affiche un éventuel message d'erreur }}
-{{#message}}<h3>{{message}}</h3>{{/message}}
-<table>
-    <tr>
-        <th>Identifiant</th>
-        <th>Nom</th>
-        <th>Population</th>
-        <th>Pays</th>
-    </tr>
-    {{! Pour chaque ville v dans la liste 'citys' transmise par le contrôleur }}
-    {{#citys}}
-    <tr>
-        {{! On affiche les informations de la ville }}
-        <td>{{id}}</td>
-        <td>{{name}}</td>
-        <td>{{population}}</td>
-        <td>{{country}}</td>
-        {{! On affiche un lien vers la page de modification de la ville }}
-        <td>
-            <a href='edit?id={{id}}'>Modifier</a>
-            <a href='delete?id={{id}}'>Supprimer</a>
-        </td>
-    </tr>
-    {{/citys}}
-</table>
+<head>
+    <title>Liste des villes</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+</head>
+
+<body>
+    {{!
+    Le contrôleur transmet deux informations à cette vue :
+    - countrys : la liste des catégories à afficher
+    - message : un éventuel message d'erreur ou d'information
+    }}
+    <h1>Les villes</h1>
+    {{! On appelle l'URL 'add' du contôleur }}
+    <a href='add'>Ajouter une ville</a>
+    {{! On affiche un éventuel message d'erreur }}
+    {{#message}}<h3>{{message}}</h3>{{/message}}
+    <table>
+        <tr>
+            <th>Identifiant</th>
+            <th>Nom</th>
+            <th>Population</th>
+            <th>Pays</th>
+            <th>Actions</th>
+        </tr>
+        {{! Pour chaque ville v dans la liste 'citys' transmise par le contrôleur }}
+        {{#citys}}
+        <tr>
+            {{! On affiche les informations de la ville }}
+            <td>{{id}}</td>
+            <td>{{name}}</td>
+            <td>{{population}}</td>
+            <td>{{country.name}}</td>
+            {{! On affiche un lien vers la page de modification de la ville }}
+            <td>
+                <a href='edit?id={{id}}'>Modifier</a>
+                <a href='delete?id={{id}}'>Supprimer</a>
+            </td>
+        </tr>
+        {{/citys}}
+    </table>
 </body>
 
 </html>

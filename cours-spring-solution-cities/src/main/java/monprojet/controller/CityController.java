@@ -77,16 +77,18 @@ public class CityController {
         return "formulaireVille";
     }
 
-    	/**
-	 * Appelé par le lien 'Supprimer' dans 'showCategories.html'
-	 * @param city à partir de l'id de la ville transmis en paramètre, 
-	 *                  Spring fera une requête SQL SELECT pour chercher la ville dans la base
-	 * @return une redirection vers l'affichage de la liste des ville
-	 */
-	@GetMapping(path = "delete")
-	public String supprimeUneCategoriePuisMontreLaListe(@RequestParam("id") City city) {
-		dao.delete(city);
-		return "redirect:show"; // on se redirige vers l'affichage de la liste
-	}
+    /**
+     * Appelé par le lien 'Supprimer' dans 'showCategories.html'
+     * 
+     * @param city à partir de l'id de la ville transmis en paramètre,
+     *             Spring fera une requête SQL SELECT pour chercher la ville dans la
+     *             base
+     * @return une redirection vers l'affichage de la liste des ville
+     */
+    @GetMapping(path = "delete")
+    public String supprimeUneCategoriePuisMontreLaListe(@RequestParam("id") City city) {
+        dao.delete(city);
+        return "redirect:show"; // on se redirige vers l'affichage de la liste
+    }
 
 }
